@@ -1,19 +1,4 @@
-export interface Exercise {
-  id: string;
-  name: string;
-  category: 'gas' | 'core' | 'strength' | 'coordination' | 'stretch';
-  ageRange: [number, number]; // months (0 = newborn, 12+ = 12 months+)
-  duration: string;
-  difficulty: 'easy' | 'medium' | 'hard';
-  description: string;
-  steps: string[];
-  benefits: string[];
-  safety: string[];
-  tips: string[];
-  isFavorite?: boolean;
-}
-
-export const exercises: Exercise[] = [
+export const exercises = [
   // Gas Relief Exercises (0-6 months)
   {
     id: 'bicycle-legs',
@@ -306,18 +291,18 @@ export const exercises: Exercise[] = [
   }
 ];
 
-export function getExercisesByAge(ageMonths: number): Exercise[] {
+export function getExercisesByAge(ageMonths) {
   return exercises.filter(ex => 
     ageMonths >= ex.ageRange[0] && ageMonths <= ex.ageRange[1]
   );
 }
 
-export function getExercisesByCategory(category: string): Exercise[] {
+export function getExercisesByCategory(category) {
   if (category === 'all') return exercises;
   return exercises.filter(ex => ex.category === category);
 }
 
-export function searchExercises(query: string): Exercise[] {
+export function searchExercises(query) {
   const lowerQuery = query.toLowerCase();
   return exercises.filter(ex =>
     ex.name.toLowerCase().includes(lowerQuery) ||

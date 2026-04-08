@@ -1,16 +1,4 @@
-export interface Milestone {
-  id: string;
-  text: string;
-  category: 'movement' | 'social' | 'language' | 'cognitive';
-}
-
-export interface AgeMilestone {
-  ageMonths: number;
-  label: string;
-  milestones: Milestone[];
-}
-
-export const ageMilestones: AgeMilestone[] = [
+export const ageMilestones = [
   {
     ageMonths: 2,
     label: '2 Months',
@@ -93,11 +81,11 @@ export const ageMilestones: AgeMilestone[] = [
   },
 ];
 
-export function getMilestonesByAge(ageMonths: number): AgeMilestone | undefined {
+export function getMilestonesByAge(ageMonths) {
   return ageMilestones.find(m => m.ageMonths === ageMonths);
 }
 
-export function getNextMilestoneAge(ageMonths: number): number | null {
+export function getNextMilestoneAge(ageMonths) {
   const ages = ageMilestones.map(m => m.ageMonths);
   const next = ages.find(a => a > ageMonths);
   return next ?? null;
