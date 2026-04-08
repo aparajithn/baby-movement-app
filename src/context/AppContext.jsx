@@ -1,34 +1,18 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export interface BabyProfile {
-  name: string;
-  birthDate: string;
-}
-
-interface AppContextType {
-  baby: BabyProfile;
-  updateBaby: (baby: BabyProfile) => void;
-  favoriteExercises: string[];
-  toggleFavorite: (exerciseId: string) => void;
-  completedExercises: string[];
-  markCompleted: (exerciseId: string) => void;
-  milestoneProgress: Record<string, boolean>;
-  updateMilestone: (milestoneId: string, achieved: boolean) => void;
-}
-
-const AppContext = createContext<AppContextType | undefined>(undefined);
+const AppContext = createContext(undefined);
 
 const BABY_KEY = '@baby_profile';
 const FAVORITES_KEY = '@favorite_exercises';
 const COMPLETED_KEY = '@completed_exercises';
 const MILESTONES_KEY = '@milestone_progress';
 
-export function AppProvider({ children }: { children: ReactNode }) {
-  const [baby, setBaby] = useState<BabyProfile>({ name: 'Baby', birthDate: new Date().toISOString() });
-  const [favoriteExercises, setFavoriteExercises] = useState<string[]>([]);
-  const [completedExercises, setCompletedExercises] = useState<string[]>([]);
-  const [milestoneProgress, setMilestoneProgress] = useState<Record<string, boolean>>({});
+export function AppProvider({ children }) {
+  const [baby, setBaby] = useState({ name: 'Baby', birthDate: new Date().toISOString() });
+  const [favoriteExercises, setFavoriteExercises] = useState([]);
+  const [completedExercises, setCompletedExercises] = useState([]);
+  const [milestoneProgress, setMilestoneProgress] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -63,7 +47,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const updateBaby = async (newBaby: BabyProfile) => {
+  const updateBaby = async (newBaby) => {
     setBaby(newBaby);
     try {
       await AsyncStorage.setItem(BABY_KEY, JSON.stringify(newBaby));
@@ -72,7 +56,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const toggleFavorite = async (exerciseId: string) => {
+  const toggleFavorite = async (exerciseId) => {
     const newFavorites = favoriteExercises.includes(exerciseId)
       ? favoriteExercises.filter(id => id !== exerciseId)
       : [...favoriteExercises, exerciseId];
@@ -85,7 +69,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const markCompleted = async (exerciseId: string) => {
+  const markCompleted = async (exerciseId) => {
     if (!completedExercises.includes(exerciseId)) {
       const newCompleted = [...completedExercises, exerciseId];
       setCompletedExercises(newCompleted);
@@ -97,7 +81,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const updateMilestone = async (milestoneId: string, achieved: boolean) => {
+  const updateMilestone = async (milestoneId, achieved) => {
     const newProgress = { ...milestoneProgress, [milestoneId]: achieved };
     setMilestoneProgress(newProgress);
     try {
@@ -108,7 +92,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   };
 
   if (isLoading) {
-    return null; // Could show a loading screen here
+    return null;
   }
 
   return (

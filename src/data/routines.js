@@ -1,20 +1,4 @@
-export interface RoutineExercise {
-  exerciseId: string;
-  durationSeconds: number;
-  order: number;
-}
-
-export interface Routine {
-  id: string;
-  name: string;
-  description: string;
-  exercises: RoutineExercise[];
-  totalDuration: string;
-  ageRange: [number, number];
-  icon: string;
-}
-
-export const routines: Routine[] = [
+export const routines = [
   {
     id: 'gas-relief',
     name: 'Gas Relief',
@@ -73,6 +57,6 @@ export const routines: Routine[] = [
   }
 ];
 
-export function getRoutineById(id: string): Routine | undefined {
+export function getRoutineById(id) {
   return routines.find(r => r.id === id);
 }

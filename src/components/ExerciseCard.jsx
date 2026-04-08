@@ -1,18 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { Exercise } from '../data/exercises';
 import { colors, spacing, fontSize } from '../theme';
 
-interface ExerciseCardProps {
-  exercise: Exercise;
-  onPress: () => void;
-  isFavorite?: boolean;
-  onToggleFavorite?: () => void;
-}
-
-export function ExerciseCard({ exercise, onPress, isFavorite, onToggleFavorite }: ExerciseCardProps) {
-  const getCategoryIcon = (category: string) => {
-    const icons: Record<string, string> = {
+export function ExerciseCard({ exercise, onPress, isFavorite, onToggleFavorite }) {
+  const getCategoryIcon = (category) => {
+    const icons = {
       gas: '💨',
       core: '💪',
       strength: '💪',
@@ -22,8 +14,8 @@ export function ExerciseCard({ exercise, onPress, isFavorite, onToggleFavorite }
     return icons[category] || '•';
   };
 
-  const getDifficultyLabel = (difficulty: string) => {
-    const labels: Record<string, string> = {
+  const getDifficultyLabel = (difficulty) => {
+    const labels = {
       easy: 'Easy',
       medium: 'Medium',
       hard: 'Hard',

@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { View, Text, ScrollView, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { exercises, Exercise, getExercisesByAge } from '../data/exercises';
+import { exercises, getExercisesByAge } from '../data/exercises';
 import { ExerciseCard } from '../components/ExerciseCard';
 import { useApp } from '../context/AppContext';
 import { colors, spacing, fontSize } from '../theme';
 
 const CATEGORIES = ['all', 'gas', 'core', 'strength', 'coordination', 'stretch'];
 
-export function ExerciseListScreen({ navigation, route }: any) {
+export function ExerciseListScreen({ navigation, route }) {
   const { minAge, maxAge } = route.params || {};
   const { favoriteExercises, toggleFavorite } = useApp();
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,12 +34,12 @@ export function ExerciseListScreen({ navigation, route }: any) {
     return filtered;
   }, [minAge, maxAge, selectedCategory, searchQuery]);
 
-  const navigateToExercise = (exercise: Exercise) => {
+  const navigateToExercise = (exercise) => {
     navigation.navigate('ExerciseDetail', { exerciseId: exercise.id });
   };
 
-  const getCategoryLabel = (cat: string) => {
-    const labels: Record<string, string> = {
+  const getCategoryLabel = (cat) => {
+    const labels = {
       all: 'All',
       gas: 'Gas',
       core: 'Core',
@@ -52,7 +52,6 @@ export function ExerciseListScreen({ navigation, route }: any) {
 
   return (
     <View style={styles.container}>
-      {/* Search Bar */}
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
@@ -62,7 +61,6 @@ export function ExerciseListScreen({ navigation, route }: any) {
         />
       </View>
 
-      {/* Category Filter */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categoryContainer}>
         {CATEGORIES.map((category) => (
           <TouchableOpacity
@@ -85,7 +83,6 @@ export function ExerciseListScreen({ navigation, route }: any) {
         ))}
       </ScrollView>
 
-      {/* Exercise List */}
       <ScrollView style={styles.listContainer}>
         {filteredExercises.length === 0 ? (
           <View style={styles.emptyState}>

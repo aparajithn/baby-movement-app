@@ -2,18 +2,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { colors, spacing, fontSize } from '../theme';
 
-interface TimerProps {
-  durationSeconds: number;
-  onComplete?: () => void;
-  autoStart?: boolean;
-}
-
-export function Timer({ durationSeconds, onComplete, autoStart = false }: TimerProps) {
+export function Timer({ durationSeconds, onComplete, autoStart = false }) {
   const [timeRemaining, setTimeRemaining] = useState(durationSeconds);
   const [isRunning, setIsRunning] = useState(autoStart);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval;
     
     if (isRunning && timeRemaining > 0) {
       interval = setInterval(() => {
@@ -31,7 +25,7 @@ export function Timer({ durationSeconds, onComplete, autoStart = false }: TimerP
     return () => clearInterval(interval);
   }, [isRunning, timeRemaining, onComplete]);
 
-  const formatTime = (seconds: number) => {
+  const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, '0')}`;

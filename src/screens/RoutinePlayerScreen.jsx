@@ -1,16 +1,13 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import { RouteProp, useRoute, useNavigation } from '@react-navigation/native';
+import React, { useState, useCallback } from 'react';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { Timer } from '../components/Timer';
 import { useApp } from '../context/AppContext';
-import { routines, Routine } from '../data/routines';
-import { exercises, Exercise } from '../data/exercises';
+import { routines } from '../data/routines';
+import { exercises } from '../data/exercises';
 import { colors, spacing, fontSize } from '../theme';
 
-export function RoutinePlayerScreen() {
-  const route = useRoute();
-  const navigation = useNavigation();
-  const { routineId } = route.params as { routineId: string };
+export function RoutinePlayerScreen({ navigation, route }) {
+  const { routineId } = route.params;
   const { markCompleted } = useApp();
 
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
@@ -67,7 +64,6 @@ export function RoutinePlayerScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Progress Header */}
       <View style={styles.header}>
         <Text style={styles.routineName}>{routine.name}</Text>
         <View style={styles.progressBarContainer}>
@@ -81,20 +77,17 @@ export function RoutinePlayerScreen() {
         </Text>
       </View>
 
-      {/* Exercise Info */}
       <View style={styles.exerciseSection}>
         <Text style={styles.exerciseName}>{currentExercise.name}</Text>
         <Text style={styles.exerciseDescription}>{currentExercise.description}</Text>
       </View>
 
-      {/* Timer */}
       <Timer
         durationSeconds={currentExerciseItem.durationSeconds}
         onComplete={handleNext}
         autoStart={false}
       />
 
-      {/* Quick Steps */}
       <View style={styles.stepsSection}>
         <Text style={styles.stepsTitle}>Quick Steps:</Text>
         {currentExercise.steps.slice(0, 3).map((step, index) => (
@@ -102,7 +95,6 @@ export function RoutinePlayerScreen() {
         ))}
       </View>
 
-      {/* Navigation Buttons */}
       <View style={styles.navigationContainer}>
         {currentExerciseIndex > 0 && (
           <TouchableOpacity style={styles.navButton} onPress={handlePrevious}>

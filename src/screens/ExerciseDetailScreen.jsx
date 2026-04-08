@@ -5,7 +5,7 @@ import { Timer } from '../components/Timer';
 import { useApp } from '../context/AppContext';
 import { colors, spacing, fontSize } from '../theme';
 
-export function ExerciseDetailScreen({ navigation, route }: any) {
+export function ExerciseDetailScreen({ navigation, route }) {
   const { exerciseId } = route.params;
   const { favoriteExercises, toggleFavorite, markCompleted } = useApp();
   
@@ -24,7 +24,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={styles.backButton}>← Back</Text>
@@ -34,7 +33,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         </TouchableOpacity>
       </View>
 
-      {/* Exercise Info */}
       <View style={styles.infoSection}>
         <Text style={styles.name}>{exercise.name}</Text>
         <Text style={styles.description}>{exercise.description}</Text>
@@ -55,13 +53,11 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         </View>
       </View>
 
-      {/* Timer */}
       <Timer 
         durationSeconds={durationSeconds}
         onComplete={() => markCompleted(exercise.id)}
       />
 
-      {/* Steps */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>How to do it</Text>
         {exercise.steps.map((step, index) => (
@@ -72,7 +68,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         ))}
       </View>
 
-      {/* Benefits */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>💡 Benefits</Text>
         {exercise.benefits.map((benefit, index) => (
@@ -80,7 +75,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         ))}
       </View>
 
-      {/* Safety */}
       <View style={[styles.section, styles.safetySection]}>
         <Text style={styles.sectionTitle}>⚠️ Safety</Text>
         {exercise.safety.map((safety, index) => (
@@ -88,7 +82,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         ))}
       </View>
 
-      {/* Tips */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>💡 Tips</Text>
         {exercise.tips.map((tip, index) => (
@@ -96,7 +89,6 @@ export function ExerciseDetailScreen({ navigation, route }: any) {
         ))}
       </View>
 
-      {/* Mark Complete Button */}
       <TouchableOpacity 
         style={styles.completeButton}
         onPress={() => {

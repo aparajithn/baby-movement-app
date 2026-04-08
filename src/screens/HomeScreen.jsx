@@ -14,7 +14,7 @@ const AGE_GROUPS = [
   { label: '12mo+', min: 12, max: 24, color: '#B5B5E4' },
 ];
 
-export function HomeScreen({ navigation }: any) {
+export function HomeScreen({ navigation }) {
   const { baby } = useApp();
 
   const calculateAge = () => {
@@ -35,11 +35,11 @@ export function HomeScreen({ navigation }: any) {
     return Math.floor((today.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 30.44));
   };
 
-  const navigateToAgeExercises = (minAge: number, maxAge: number) => {
+  const navigateToAgeExercises = (minAge, maxAge) => {
     navigation.navigate('ExerciseList', { minAge, maxAge });
   };
 
-  const navigateToRoutine = (routineId: string) => {
+  const navigateToRoutine = (routineId) => {
     navigation.navigate('RoutinePlayer', { routineId });
   };
 
@@ -47,13 +47,11 @@ export function HomeScreen({ navigation }: any) {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.greeting}>Good morning</Text>
         <Text style={styles.babyInfo}>{baby.name} is {calculateAge()}</Text>
       </View>
 
-      {/* Quick Routines */}
       <Text style={styles.sectionTitle}>Quick Routines</Text>
       <View style={styles.routinesContainer}>
         {routines.map((routine) => (
@@ -69,7 +67,6 @@ export function HomeScreen({ navigation }: any) {
         ))}
       </View>
 
-      {/* Age Selector */}
       <Text style={styles.sectionTitle}>Explore by Age</Text>
       <View style={styles.ageContainer}>
         {AGE_GROUPS.map((age) => (
@@ -92,7 +89,6 @@ export function HomeScreen({ navigation }: any) {
         ))}
       </View>
 
-      {/* Milestones Preview */}
       <TouchableOpacity 
         style={styles.milestonesCard}
         onPress={() => navigation.navigate('Milestones')}

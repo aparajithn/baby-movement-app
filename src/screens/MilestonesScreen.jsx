@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { ageMilestones, Milestone } from '../data/milestones';
+import { ageMilestones } from '../data/milestones';
 import { useApp } from '../context/AppContext';
 import { colors, spacing, fontSize } from '../theme';
 
-const CATEGORY_ICONS: Record<string, string> = {
+const CATEGORY_ICONS = {
   movement: '💪',
   social: '😊',
   language: '💬',
@@ -22,12 +22,12 @@ export function MilestonesScreen() {
 
   const currentAge = calculateAgeMonths();
 
-  const toggleMilestone = (milestoneId: string) => {
+  const toggleMilestone = (milestoneId) => {
     const currentValue = milestoneProgress[milestoneId] || false;
     updateMilestone(milestoneId, !currentValue);
   };
 
-  const getProgress = (ageMilestone: typeof ageMilestones[0]) => {
+  const getProgress = (ageMilestone) => {
     const achieved = ageMilestone.milestones.filter(
       m => milestoneProgress[m.id]
     ).length;
@@ -36,13 +36,11 @@ export function MilestonesScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>📊 {baby.name}'s Milestones</Text>
         <Text style={styles.headerSubtitle}>Based on CDC guidelines</Text>
       </View>
 
-      {/* Age Milestones */}
       {ageMilestones.map((ageMilestone) => {
         const { achieved, total } = getProgress(ageMilestone);
         const progressPercent = (achieved / total) * 100;
@@ -63,13 +61,11 @@ export function MilestonesScreen() {
               <Text style={styles.progressText}>{achieved}/{total} completed</Text>
             </View>
 
-            {/* Progress Bar */}
             <View style={styles.progressBarContainer}>
               <View style={[styles.progressBar, { width: `${progressPercent}%` }]} />
             </View>
 
-            {/* Milestones */}
-            {ageMilestone.milestones.map((milestone: Milestone) => (
+            {ageMilestone.milestones.map((milestone) => (
               <TouchableOpacity
                 key={milestone.id}
                 style={styles.milestoneRow}
