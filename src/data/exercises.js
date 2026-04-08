@@ -1,5 +1,5 @@
-// Exercise images will be loaded dynamically
-// Images stored in assets/exercises/
+// Exercise images - only available for exercises with PNG files
+// Missing PNGs are marked with null and will use fallback SVG icons
 
 const exerciseImages = {
   'bicycle-legs': require('../assets/exercises/bicycle-legs.png'),
@@ -7,17 +7,10 @@ const exerciseImages = {
   'i-love-u-massage': require('../assets/exercises/iloveu-massage.png'),
   'knees-to-chest': require('../assets/exercises/knees-to-chest.png'),
   'chest-to-chest': require('../assets/exercises/chest-to-chest.png'),
-  'happy-baby': require('../assets/exercises/happy-baby.png'),
-  'butterfly-twist': require('../assets/exercises/butterfly-twist.png'),
-  'football-hold': require('../assets/exercises/football-hold.png'),
-  'hand-exercises': require('../assets/exercises/hand-exercises.png'),
-  'assisted-crawling': require('../assets/exercises/assisted-crawling.png'),
-  'downward-dog': require('../assets/exercises/downward-dog.png'),
-  'sitting-on-stool': require('../assets/exercises/sitting-on-stool.png'),
-  'bounce-baby': require('../assets/exercises/bounce-baby.png'),
-  'cruising': require('../assets/exercises/cruising.png'),
-  'catch-the-toy': require('../assets/exercises/catch-the-toy.png'),
-  'bubble-gaze': require('../assets/exercises/bubble-gaze.png'),
+  'side-lying': require('../assets/exercises/side-lying.png'),
+  // Missing: happy-baby, butterfly-twist, football-hold, hand-exercises,
+  // assisted-crawling, downward-dog, sitting-on-stool, bounce-baby,
+  // cruising, catch-the-toy, bubble-gaze
 };
 
 export const exercises = [

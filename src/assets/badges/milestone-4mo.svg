@@ -13,12 +13,17 @@
   <!-- Inner circle -->
   <circle cx="60" cy="60" r="45" fill="url(#badge4mo)" opacity="0.2"/>
   
-  <!-- Number -->
-  <text x="60" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFD567" text-anchor="middle">4</text>
-  <text x="60" y="78" font-family="Arial, sans-serif" font-size="12" fill="#FFD567" text-anchor="middle">MONTHS</text>
+  <!-- Number 4 (as path) -->
+  <path d="M70 45 L70 40 L55 60 L45 60 L45 55 L65 30 L70 30 L70 75 L65 75 L65 65 L50 65 L50 60 L70 60 L70 45" fill="#FFD567"/>
   
   <!-- Decorative stars -->
   <polygon points="35,35 37,40 42,40 38,43 40,48 35,45 30,48 32,43 28,40 33,40" fill="#FFE5A3" opacity="0.6"/>
   <polygon points="85,35 87,40 92,40 88,43 90,48 85,45 80,48 82,43 78,40 83,40" fill="#FFE5A3" opacity="0.6"/>
   <polygon points="60,25 62,30 67,30 63,33 65,38 60,35 55,38 57,33 53,30 58,30" fill="#FFE5A3" opacity="0.6"/>
+  
+  <!-- Month indicator dots -->
+  <circle cx="45" cy="90" r="4" fill="#FFD567"/>
+  <circle cx="55" cy="90" r="4" fill="#FFD567"/>
+  <circle cx="65" cy="90" r="4" fill="#FFD567"/>
+  <circle cx="75" cy="90" r="4" fill="#FFD567"/>
 </svg>

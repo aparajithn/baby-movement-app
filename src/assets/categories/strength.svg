@@ -1,0 +1,23 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="catStrength" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8A87C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4956A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="60" cy="60" r="55" fill="#FDF8F3"/>
+  <circle cx="60" cy="60" r="50" fill="url(#catStrength)" opacity="0.15"/>
+  
+  <!-- Flexed arm/bicep icon -->
+  <path d="M45 70 Q40 60 45 50 Q50 40 60 42 Q70 44 72 55 Q74 65 65 70" stroke="url(#catStrength)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Hand/fist -->
+  <circle cx="68" cy="52" r="6" fill="url(#catStrength)"/>
+  
+  <!-- Strength lines -->
+  <path d="M50 35 L50 30" stroke="url(#catStrength)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M58 32 L58 27" stroke="url(#catStrength)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M66 35 L66 30" stroke="url(#catStrength)" stroke-width="3" stroke-linecap="round"/>
+</svg>

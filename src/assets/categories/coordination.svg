@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="catCoord" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#85C1A5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6FAE92;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="60" cy="60" r="55" fill="#FDF8F3"/>
+  <circle cx="60" cy="60" r="50" fill="url(#catCoord)" opacity="0.15"/>
+  
+  <!-- Reaching hand -->
+  <path d="M50 70 Q45 60 50 50 Q55 40 60 42" stroke="url(#catCoord)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Object/ball to grasp -->
+  <circle cx="70" cy="45" r="10" fill="url(#catCoord)" opacity="0.6"/>
+  
+  <!-- Fingers reaching -->
+  <path d="M55 50 L62 48" stroke="url(#catCoord)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M54 55 L63 52" stroke="url(#catCoord)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M55 60 L64 58" stroke="url(#catCoord)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Motion lines -->
+  <path d="M75 35 Q80 38 75 41" stroke="url(#catCoord)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M78 42 Q83 45 78 48" stroke="url(#catCoord)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>

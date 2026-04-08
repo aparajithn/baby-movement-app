@@ -13,9 +13,8 @@
   <!-- Inner circle -->
   <circle cx="60" cy="60" r="45" fill="url(#badge9mo)" opacity="0.2"/>
   
-  <!-- Number -->
-  <text x="60" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#6B9ACF" text-anchor="middle">9</text>
-  <text x="60" y="78" font-family="Arial, sans-serif" font-size="12" fill="#6B9ACF" text-anchor="middle">MONTHS</text>
+  <!-- Number 9 (as path) -->
+  <path d="M50 45 L50 40 L70 40 C78 40 80 48 80 55 C80 65 72 75 60 75 C52 75 48 70 48 65 C48 60 52 55 60 55 L65 55 C70 55 75 58 75 65 C75 72 68 80 60 80 C50 80 45 72 45 65 L45 45 L50 45 M60 60 C55 60 53 63 53 65 C53 68 55 70 60 70 C65 70 70 65 70 60 C70 55 67 50 60 50 L50 50 L50 60 L60 60" fill="#6B9ACF"/>
   
   <!-- Decorative stars -->
   <polygon points="35,35 37,40 42,40 38,43 40,48 35,45 30,48 32,43 28,40 33,40" fill="#A3C4FF" opacity="0.6"/>
@@ -23,4 +22,14 @@
   <polygon points="60,25 62,30 67,30 63,33 65,38 60,35 55,38 57,33 53,30 58,30" fill="#A3C4FF" opacity="0.6"/>
   <polygon points="45,85 47,90 52,90 48,93 50,98 45,95 40,98 42,93 38,90 43,90" fill="#A3C4FF" opacity="0.6"/>
   <polygon points="75,85 77,90 82,90 78,93 80,98 75,95 70,98 72,93 68,90 73,90" fill="#A3C4FF" opacity="0.6"/>
+  
+  <!-- Month indicator dots -->
+  <circle cx="38" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="48" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="58" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="68" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="78" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="88" cy="95" r="3" fill="#6B9ACF"/>
+  <circle cx="53" cy="102" r="3" fill="#6B9ACF"/>
+  <circle cx="63" cy="102" r="3" fill="#6B9ACF"/>
 </svg>

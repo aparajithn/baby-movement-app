@@ -13,9 +13,11 @@
   <!-- Inner circle -->
   <circle cx="60" cy="60" r="45" fill="url(#badge12mo)" opacity="0.2"/>
   
-  <!-- Number -->
-  <text x="60" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#B388CC" text-anchor="middle">12</text>
-  <text x="60" y="78" font-family="Arial, sans-serif" font-size="12" fill="#B388CC" text-anchor="middle">MONTHS</text>
+  <!-- Number 12 (as paths) -->
+  <!-- 1 -->
+  <path d="M55 40 L60 40 L60 80 L55 80 L55 40" fill="#B388CC"/>
+  <!-- 2 -->
+  <path d="M75 45 L75 40 L55 40 L55 45 L70 45 L55 65 L55 70 L75 70 L75 65 L60 65 L75 45 L75 45" fill="#B388CC"/>
   
   <!-- Decorative stars -->
   <polygon points="35,35 37,40 42,40 38,43 40,48 35,45 30,48 32,43 28,40 33,40" fill="#D4A5E8" opacity="0.6"/>
@@ -23,4 +25,18 @@
   <polygon points="60,25 62,30 67,30 63,33 65,38 60,35 55,38 57,33 53,30 58,30" fill="#D4A5E8" opacity="0.6"/>
   <polygon points="45,85 47,90 52,90 48,93 50,98 45,95 40,98 42,93 38,90 43,90" fill="#D4A5E8" opacity="0.6"/>
   <polygon points="75,85 77,90 82,90 78,93 80,98 75,95 70,98 72,93 68,90 73,90" fill="#D4A5E8" opacity="0.6"/>
+  
+  <!-- Month indicator dots (12 dots in a circle) -->
+  <circle cx="60" cy="35" r="2.5" fill="#B388CC"/>
+  <circle cx="68" cy="37" r="2.5" fill="#B388CC"/>
+  <circle cx="75" cy="42" r="2.5" fill="#B388CC"/>
+  <circle cx="80" cy="50" r="2.5" fill="#B388CC"/>
+  <circle cx="82" cy="60" r="2.5" fill="#B388CC"/>
+  <circle cx="80" cy="70" r="2.5" fill="#B388CC"/>
+  <circle cx="75" cy="78" r="2.5" fill="#B388CC"/>
+  <circle cx="68" cy="83" r="2.5" fill="#B388CC"/>
+  <circle cx="60" cy="85" r="2.5" fill="#B388CC"/>
+  <circle cx="52" cy="83" r="2.5" fill="#B388CC"/>
+  <circle cx="45" cy="78" r="2.5" fill="#B388CC"/>
+  <circle cx="40" cy="70" r="2.5" fill="#B388CC"/>
 </svg>

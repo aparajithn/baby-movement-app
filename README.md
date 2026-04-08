@@ -11,12 +11,38 @@ A React Native / Expo app for tracking baby exercises and milestones.
 ### Splash Screen
 - **splash.png** (1284x2778) — Warm cream background with app logo and tagline
 
+### Exercise Illustrations (`src/assets/exercises/`)
+Friendly 400x400px PNG illustrations for each exercise (6 available, SVG sources included):
+- `bicycle-legs.png` — Baby on back, legs cycling motion (gas relief)
+- `tummy-time.png` — Baby on tummy, head up
+- `iloveu-massage.png` — Hands doing I-Love-U massage pattern on baby belly
+- `knees-to-chest.png` — Baby on back, knees brought to chest
+- `chest-to-chest.png` — Parent holding baby chest-to-chest
+- `side-lying.png` — Baby on side for play
+
+### Milestone Badges (`src/assets/badges/`)
+Achievement-style 120x120px badges for milestone tracking:
+- `milestone-2mo.png` — 2 Months badge (soft pink)
+- `milestone-4mo.png` — 4 Months badge (soft yellow)
+- `milestone-6mo.png` — 6 Months badge (soft green)
+- `milestone-9mo.png` — 9 Months badge (soft blue)
+- `milestone-12mo.png` — 12 Months badge (soft purple)
+- `milestone-complete.png` — Checkmark/celebration badge
+
+### Category Icons (`src/assets/categories/`)
+120x120px icons for exercise categories:
+- `gas-relief.png` — Wind/gas icon
+- `tummy-time.png` — Baby on tummy icon
+- `strength.png` — Baby arm/strength icon
+- `coordination.png` — Baby reaching/grasping
+- `stretch.png` — Baby stretching
+- `crawling.png` — Baby crawling motion
+
 ### Design System
 - **Colors**: Coral (#E8A87C), Sage (#85C1A5), Cream (#FDF8F3)
-- **Style**: Warm, friendly, baby-focused with gentle movement imagery
-- **Format**: PNG with transparency support
-
-Assets generated with `assets/generate_assets.py` using PIL/Pillow.
+- **Style**: Simple, friendly, minimal line art
+- **Format**: PNG with transparency, SVG source files included
+- **Inclusive**: Diverse baby representations where applicable
 
 ## Features
 

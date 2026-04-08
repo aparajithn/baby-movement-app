@@ -1,0 +1,25 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="catTummy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#85C1A5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6FAE92;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="60" cy="60" r="55" fill="#FDF8F3"/>
+  <circle cx="60" cy="60" r="50" fill="url(#catTummy)" opacity="0.15"/>
+  
+  <!-- Baby on tummy (simplified) -->
+  <ellipse cx="60" cy="75" rx="25" ry="18" fill="url(#catTummy)" opacity="0.4"/>
+  
+  <!-- Head (lifted) -->
+  <circle cx="60" cy="50" r="15" fill="url(#catTummy)"/>
+  
+  <!-- Arms supporting -->
+  <path d="M48 60 Q40 70 38 78" stroke="url(#catTummy)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M72 60 Q80 70 82 78" stroke="url(#catTummy)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Mat line -->
+  <path d="M35 85 Q60 90 85 85" stroke="url(#catTummy)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>
