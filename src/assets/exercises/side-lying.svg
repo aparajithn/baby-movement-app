@@ -1,0 +1,43 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDF8F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5ebe0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#bg6)" opacity="0.5"/>
+  
+  <!-- Baby body (side lying) -->
+  <ellipse cx="210" cy="230" rx="55" ry="70" fill="#E8A87C" opacity="0.3" transform="rotate(-10 210 230)"/>
+  
+  <!-- Head (turned to side) -->
+  <circle cx="195" cy="165" r="34" fill="#E8A87C"/>
+  
+  <!-- Hair -->
+  <path d="M168 150 Q195 133 222 150 Q227 158 222 163 Q195 145 168 163 Q163 158 168 150" fill="#8B7355"/>
+  
+  <!-- Face (side view) -->
+  <circle cx="185" cy="160" r="3" fill="#5D4E37"/>
+  <path d="M195 168 Q200 172 205 168" stroke="#5D4E37" stroke-width="2" fill="none"/>
+  <ellipse cx="210" cy="162" rx="8" ry="5" fill="#E8A87C" opacity="0.5"/>
+  
+  <!-- Body -->
+  <rect x="175" y="190" width="55" height="75" rx="27" fill="#85C1A5" transform="rotate(-10 202 227)"/>
+  
+  <!-- Arms (forward for play) -->
+  <path d="M180 205 Q155 215 145 235" stroke="#E8A87C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M210 200 Q230 210 245 225" stroke="#E8A87C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  
+  <!-- Legs (slightly bent) -->
+  <path d="M185 260 Q175 280 180 295" stroke="#E8A87C" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M220 255 Q230 275 225 290" stroke="#E8A87C" stroke-width="14" stroke-linecap="round" fill="none"/>
+  
+  <!-- Support pillow/roll -->
+  <ellipse cx="170" cy="250" rx="30" ry="40" fill="#85C1A5" opacity="0.3"/>
+  
+  <!-- Toy in front -->
+  <circle cx="260" cy="220" r="15" fill="#E8A87C" opacity="0.6"/>
+  <circle cx="275" cy="210" r="10" fill="#85C1A5" opacity="0.6"/>
+</svg>

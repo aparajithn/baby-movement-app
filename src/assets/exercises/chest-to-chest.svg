@@ -1,0 +1,45 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDF8F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5ebe0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#bg5)" opacity="0.5"/>
+  
+  <!-- Parent body (simplified) -->
+  <ellipse cx="200" cy="280" rx="80" ry="70" fill="#85C1A5" opacity="0.4"/>
+  
+  <!-- Parent shoulders/chest area -->
+  <path d="M140 220 Q200 200 260 220 L260 280 Q200 300 140 280 Z" fill="#85C1A5"/>
+  
+  <!-- Baby (on parent's chest) -->
+  <ellipse cx="200" cy="180" rx="50" ry="65" fill="#E8A87C" opacity="0.5"/>
+  
+  <!-- Baby head -->
+  <circle cx="200" cy="130" r="32" fill="#E8A87C"/>
+  
+  <!-- Baby hair -->
+  <path d="M172 115 Q200 98 228 115 Q233 123 228 128 Q200 110 172 128 Q167 123 172 115" fill="#5D4E37"/>
+  
+  <!-- Baby face -->
+  <circle cx="192" cy="125" r="2.5" fill="#5D4E37"/>
+  <circle cx="208" cy="125" r="2.5" fill="#5D4E37"/>
+  <path d="M196 133 Q200 137 204 133" stroke="#5D4E37" stroke-width="2" fill="none"/>
+  
+  <!-- Baby body -->
+  <rect x="178" y="155" width="44" height="60" rx="22" fill="#E8A87C"/>
+  
+  <!-- Baby arms -->
+  <path d="M178 165 Q160 175 155 190" stroke="#E8A87C" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M222 165 Q240 175 245 190" stroke="#E8A87C" stroke-width="10" stroke-linecap="round" fill="none"/>
+  
+  <!-- Parent hands supporting baby -->
+  <ellipse cx="165" cy="200" rx="18" ry="22" fill="#85C1A5" opacity="0.6"/>
+  <ellipse cx="235" cy="200" rx="18" ry="22" fill="#85C1A5" opacity="0.6"/>
+  
+  <!-- Heart symbol -->
+  <path d="M200 95 C195 90 188 90 185 95 C182 100 188 105 200 115 C212 105 218 100 215 95 C212 90 205 90 200 95" fill="#E8A87C" opacity="0.8"/>
+</svg>

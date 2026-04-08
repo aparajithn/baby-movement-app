@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { Timer } from '../components/Timer';
+import { AnimatedTimer } from '../components/AnimatedTimer';
 import { useApp } from '../context/AppContext';
 import { routines } from '../data/routines';
 import { exercises } from '../data/exercises';
@@ -82,7 +82,7 @@ export function RoutinePlayerScreen({ navigation, route }) {
         <Text style={styles.exerciseDescription}>{currentExercise.description}</Text>
       </View>
 
-      <Timer
+      <AnimatedTimer
         durationSeconds={currentExerciseItem.durationSeconds}
         onComplete={handleNext}
         autoStart={false}

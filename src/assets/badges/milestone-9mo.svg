@@ -1,0 +1,26 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badge9mo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A3C4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B9ACF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Badge background -->
+  <circle cx="60" cy="60" r="55" fill="url(#badge9mo)"/>
+  <circle cx="60" cy="60" r="50" fill="#FDF8F3"/>
+  
+  <!-- Inner circle -->
+  <circle cx="60" cy="60" r="45" fill="url(#badge9mo)" opacity="0.2"/>
+  
+  <!-- Number -->
+  <text x="60" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#6B9ACF" text-anchor="middle">9</text>
+  <text x="60" y="78" font-family="Arial, sans-serif" font-size="12" fill="#6B9ACF" text-anchor="middle">MONTHS</text>
+  
+  <!-- Decorative stars -->
+  <polygon points="35,35 37,40 42,40 38,43 40,48 35,45 30,48 32,43 28,40 33,40" fill="#A3C4FF" opacity="0.6"/>
+  <polygon points="85,35 87,40 92,40 88,43 90,48 85,45 80,48 82,43 78,40 83,40" fill="#A3C4FF" opacity="0.6"/>
+  <polygon points="60,25 62,30 67,30 63,33 65,38 60,35 55,38 57,33 53,30 58,30" fill="#A3C4FF" opacity="0.6"/>
+  <polygon points="45,85 47,90 52,90 48,93 50,98 45,95 40,98 42,93 38,90 43,90" fill="#A3C4FF" opacity="0.6"/>
+  <polygon points="75,85 77,90 82,90 78,93 80,98 75,95 70,98 72,93 68,90 73,90" fill="#A3C4FF" opacity="0.6"/>
+</svg>

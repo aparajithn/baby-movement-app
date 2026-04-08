@@ -1,0 +1,44 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDF8F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5ebe0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#bg4)" opacity="0.5"/>
+  
+  <!-- Baby body (on back) -->
+  <ellipse cx="200" cy="240" rx="60" ry="75" fill="#E8A87C" opacity="0.3"/>
+  
+  <!-- Head -->
+  <circle cx="200" cy="165" r="35" fill="#E8A87C"/>
+  
+  <!-- Hair -->
+  <path d="M170 148 Q200 128 230 148 Q235 158 230 163 Q200 143 170 163 Q165 158 170 148" fill="#8B7355"/>
+  
+  <!-- Face -->
+  <circle cx="190" cy="160" r="3" fill="#5D4E37"/>
+  <circle cx="210" cy="160" r="3" fill="#5D4E37"/>
+  <path d="M195 170 Q200 175 205 170" stroke="#5D4E37" stroke-width="2" fill="none"/>
+  
+  <!-- Body -->
+  <rect x="175" y="195" width="50" height="70" rx="25" fill="#85C1A5"/>
+  
+  <!-- Arms (holding legs) -->
+  <path d="M175 205 Q160 220 165 240" stroke="#E8A87C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M225 205 Q240 220 235 240" stroke="#E8A87C" stroke-width="12" stroke-linecap="round" fill="none"/>
+  
+  <!-- Legs (knees to chest) -->
+  <path d="M180 260 Q185 275 200 250" stroke="#E8A87C" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M220 260 Q215 275 200 250" stroke="#E8A87C" stroke-width="14" stroke-linecap="round" fill="none"/>
+  
+  <!-- Feet -->
+  <ellipse cx="190" cy="245" rx="12" ry="8" fill="#E8A87C"/>
+  <ellipse cx="210" cy="245" rx="12" ry="8" fill="#E8A87C"/>
+  
+  <!-- Motion indicators -->
+  <path d="M170 250 Q160 255 170 260" stroke="#85C1A5" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M230 250 Q240 255 230 260" stroke="#85C1A5" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+</svg>

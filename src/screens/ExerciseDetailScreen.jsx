@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { exercises, getExerciseImage } from '../data/exercises';
-import { Timer } from '../components/Timer';
+import { AnimatedTimer } from '../components/AnimatedTimer';
+import { ExerciseAnimation } from '../components/ExerciseAnimation';
 import { useApp } from '../context/AppContext';
 import { colors, spacing, fontSize } from '../theme';
 
@@ -21,6 +22,7 @@ export function ExerciseDetailScreen({ navigation, route }) {
 
   const isFavorite = favoriteExercises.includes(exercise.id);
   const durationSeconds = parseInt(exercise.duration) * 60 || 60;
+  const hasImage = getExerciseImage(exercise.id) !== null;
 
   return (
     <ScrollView style={styles.container}>
@@ -33,15 +35,18 @@ export function ExerciseDetailScreen({ navigation, route }) {
         </TouchableOpacity>
       </View>
 
-      {getExerciseImage(exercise.id) && (
-        <View style={styles.imageContainer}>
+      {/* Exercise Animation or Image */}
+      <View style={styles.visualContainer}>
+        {hasImage ? (
           <Image 
             source={getExerciseImage(exercise.id)}
             style={styles.exerciseImage}
             resizeMode="contain"
           />
-        </View>
-      )}
+        ) : (
+          <ExerciseAnimation exerciseId={exercise.id} size={200} />
+        )}
+      </View>
 
       <View style={styles.infoSection}>
         <Text style={styles.name}>{exercise.name}</Text>
@@ -63,7 +68,7 @@ export function ExerciseDetailScreen({ navigation, route }) {
         </View>
       </View>
 
-      <Timer 
+      <AnimatedTimer 
         durationSeconds={durationSeconds}
         onComplete={() => markCompleted(exercise.id)}
       />
@@ -132,14 +137,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.primary,
   },
-  imageContainer: {
+  visualContainer: {
     backgroundColor: colors.background,
     alignItems: 'center',
-    paddingVertical: spacing.md,
+    paddingVertical: spacing.lg,
+    minHeight: 200,
+    justifyContent: 'center',
   },
   exerciseImage: {
-    width: 300,
-    height: 300,
+    width: 280,
+    height: 280,
     borderRadius: 16,
   },
   infoSection: {
