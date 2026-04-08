@@ -20,12 +20,12 @@ const Tab = createBottomTabNavigator();
 
 
 // Tab icons
-const TabIcon = ({ name, focused }: { name: string; focused: boolean }) => {
-  const icons: Record<string, string> = {
+const TabIcon = ({ name, focused }) => {
+  const icons = {
     Home: '🏠',
     Exercises: '📋',
     Milestones: '📊',
-    Settings: '⚙️',
+    Settings: '👶',
   };
   return (
     <Text style={{ fontSize: 24, opacity: focused ? 1 : 0.5 }}>{icons[name] || '📱'}</Text>

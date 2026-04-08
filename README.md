@@ -1,6 +1,22 @@
-# Baby Movement App
+# Adhira's Moves
 
 A React Native / Expo app for tracking baby exercises and milestones.
+
+## Visual Assets
+
+### App Icons
+- **icon.png** (1024x1024) — Main app icon with baby silhouette on coral/sage background
+- **adaptive-icon.png** (1024x1024) — Android adaptive icon with masked design
+
+### Splash Screen
+- **splash.png** (1284x2778) — Warm cream background with app logo and tagline
+
+### Design System
+- **Colors**: Coral (#E8A87C), Sage (#85C1A5), Cream (#FDF8F3)
+- **Style**: Warm, friendly, baby-focused with gentle movement imagery
+- **Format**: PNG with transparency support
+
+Assets generated with `assets/generate_assets.py` using PIL/Pillow.
 
 ## Features
 

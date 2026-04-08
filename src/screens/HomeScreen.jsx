@@ -48,7 +48,7 @@ export function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.greeting}>Good morning</Text>
+        <Text style={styles.greeting}>Good morning ✨</Text>
         <Text style={styles.babyInfo}>{baby.name} is {calculateAge()}</Text>
       </View>
 
