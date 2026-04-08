@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { exercises } from '../data/exercises';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { exercises, getExerciseImage } from '../data/exercises';
 import { Timer } from '../components/Timer';
 import { useApp } from '../context/AppContext';
 import { colors, spacing, fontSize } from '../theme';
@@ -32,6 +32,16 @@ export function ExerciseDetailScreen({ navigation, route }) {
           <Text style={styles.favoriteIcon}>{isFavorite ? '♥' : '♡'}</Text>
         </TouchableOpacity>
       </View>
+
+      {getExerciseImage(exercise.id) && (
+        <View style={styles.imageContainer}>
+          <Image 
+            source={getExerciseImage(exercise.id)}
+            style={styles.exerciseImage}
+            resizeMode="contain"
+          />
+        </View>
+      )}
 
       <View style={styles.infoSection}>
         <Text style={styles.name}>{exercise.name}</Text>
@@ -121,6 +131,16 @@ const styles = StyleSheet.create({
   favoriteIcon: {
     fontSize: 24,
     color: colors.primary,
+  },
+  imageContainer: {
+    backgroundColor: colors.background,
+    alignItems: 'center',
+    paddingVertical: spacing.md,
+  },
+  exerciseImage: {
+    width: 300,
+    height: 300,
+    borderRadius: 16,
   },
   infoSection: {
     backgroundColor: colors.surface,
