@@ -16,17 +16,24 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.babymovement"
+      "bundleIdentifier": "com.dabara.babymovement",
+      "buildNumber": "1.0.0.1"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FDF8F3"
       },
-      "package": "com.yourcompany.babymovement"
+      "package": "com.dabara.babymovement",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
     }
   }
 }

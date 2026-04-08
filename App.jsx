@@ -7,6 +7,7 @@ import { Text, View } from 'react-native';
 
 import { AppProvider } from './src/context/AppContext';
 import { HomeScreen } from './src/screens/HomeScreen';
+import { SettingsScreen } from './src/screens/SettingsScreen';
 import { ExerciseListScreen } from './src/screens/ExerciseListScreen';
 import { ExerciseDetailScreen } from './src/screens/ExerciseDetailScreen';
 import { MilestonesScreen } from './src/screens/MilestonesScreen';
@@ -16,15 +17,7 @@ import { colors } from './src/theme';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Simple placeholder for Settings screen
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.background }}>
-      <Text style={{ fontSize: 24, color: colors.textPrimary }}>Settings</Text>
-      <Text style={{ fontSize: 16, color: colors.textSecondary, marginTop: 16 }}>Baby Movement App v1.0</Text>
-    </View>
-  );
-}
+
 
 // Tab icons
 const TabIcon = ({ name, focused }: { name: string; focused: boolean }) => {
